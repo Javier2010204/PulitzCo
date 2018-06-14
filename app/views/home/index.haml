@@ -1,0 +1,32 @@
+.top-space
+  .row.center-xs
+    .col-xs-8.col-sm-8
+      .box
+        .row
+          .col-lg-2.col-sm-3.col-xs-10
+            .box
+              %ul.remove-bullet-points.text-left
+                %li
+                  =link_to 'explorar', '#'
+                %li
+                  =link_to 'mis fuentes', '#'
+                %li
+                  =link_to 'recomendaciones', '#'
+                %li
+                  =link_to 'mi perfil', current_user
+                %li
+                  =link_to 'conferencias', conferences_path
+                %li
+                  =link_to 'Noticias', root_path
+          .col-lg-10.col-sm
+            .box
+              .white.large-padding
+                =render 'contacts/form'
+              #contacts
+                .data
+                  = render @contacts
+                #pagination
+                  =will_paginate @contacts
+.btn-floating
+  =button_to search_new_url(), method: :get, class: 'mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-js-ripple-effect' do
+    %i.material-icons search

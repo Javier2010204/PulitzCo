@@ -1,0 +1,94 @@
+html,body{
+	margin: 0px;
+	padding: 0;
+	height: 100%;
+	background-color: #EEEEEE;
+}
+p{
+	margin: 0;
+}
+/* fonts */
+.small{
+	font-size: 1em;
+}
+.normal{
+	font-size: 1.2em;
+}
+.medium{
+	font-size: 1.5em;
+}
+.big{
+	font-size: 2.5em;
+}
+/* font styles */
+.no-underline{
+	text-decoration: none;
+}
+.full-height{
+	height: 100%;
+}
+.full-width{
+	width: 100%;
+}
+.big-padding{
+	padding: 2em 1.5em
+}
+.large-padding{
+	padding: 15px 10px;
+}
+.no-margin{
+	margin: 0;
+}
+.bold{
+	text-style: bold;
+}
+.top-space{
+	margin-top: 1em;
+}
+/* text aligns */
+.text-right{
+	text-align: right;
+}
+.text-left{
+	text-align: left;
+}
+.text-center{
+	text-align: center;
+}
+.text-justify{
+	text-align: justify;
+}
+.float-right{
+	float: right;
+}
+.underline{
+	text-decoration: underline;
+}
+.border-bottom{
+	border-bottom: 1px solid black;
+}
+.remove-bullet-points{
+	list-style-type: none;
+	margin: 0;
+}
+.no-decoration-style{
+	text-decoration: none;
+}
+.close-parent{
+	cursor: pointer;
+}
+.absolute{
+	position: absolute;
+}
+.relative{
+	position: relative;
+}
+.circle{
+	border-radius: 50%;
+}
+.btn-floating{
+	position: fixed;
+	bottom: 2em;
+	right: 2em;
+	z-index: 100;
+}

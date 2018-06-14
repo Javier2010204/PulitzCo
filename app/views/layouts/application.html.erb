@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pulitzer</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-light_blue.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<div id="global-snackbar" class="mdl-js-snackbar mdl-snackbar">
+      <div class="mdl-snackbar__text"></div>
+      <button type="button" class="mdl-snackbar__action"></button>
+    </div>
+    <div class="mdl-layout mdl-js-layout">
+      <%= render 'partials/nav' %>
+      <p style="<%= 'display:none;' if notice.nil? && alert.nil? %>" class="red large-padding text-center white-text alert">
+        <%= notice %>
+        <%= alert %>
+        <span class="float-right close-parent">X</span>
+      </p>
+      <main class="mdl-layout__content full-height">
+        <div class="page-content full-height">
+          <%= yield %>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+json.extract! @usuario, :id, :email, :full_name, :bio, :grade

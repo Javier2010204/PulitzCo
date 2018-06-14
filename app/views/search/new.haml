@@ -1,0 +1,17 @@
+.row.center-xs
+	.col-xs-12.col-sm-6.col-lg-14.mdl-shadow--2dp.big-padding.white
+		.box
+			%h2.green-dark-text Buscador
+			=form_tag '/search/create', remote: true do 
+				.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+					%label.mdl-textfield__label Escribe lo que deseas buscar...
+					=text_field_tag :keyword, nil, class: 'mdl-textfield__input'
+				.actions
+					=content_tag :button, type: :submit, class: 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect' do
+						Buscar
+.row.center-xs
+	.col-xs-12.col-sm-6
+		.box
+			%h3 Resultados: 
+			#resultados
+	

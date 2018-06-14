@@ -1,0 +1,63 @@
+.row.center-xs
+	.col-xs-10.col-sm-8.col-md-6.col-lg-6
+		.box
+			.white.mdl-shadow--2dp.top-space
+				.big-padding.white-text-text-left.cover.relative{style: "background-image: url(#{@usuario.cover.url(:medium)})"}
+					.top-space
+						=circle_img @usuario.avatar.url(:thumb),100
+				%section.border-bottom.top-space
+					.row.middle-xs
+						.col-xs-8.col-sm-6
+							.box
+								%h3
+									%span= @usuario.full_name
+								%p 
+									%span= @usuario.email
+								%p 
+									%span= @usuario.grade
+						.col-xs-4.col-sm-6
+							.box
+								-unless current_user != @usuario
+									=link_to 'Editar Perfil', edit_user_url(@usuario), class: 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored'
+				.large-padding
+					.row
+						.col-xs-4.col-md-6
+							.box
+								%strong
+									5 seguidores
+						.col-xs-8.col-md-6
+							.box
+								%strong
+									=@contactos.count
+									contactos
+					.row.center-xs
+						.col-xs-12.col-sm-6
+							.box
+								.top-space
+									%span= @usuario.bio
+.row.center-xs.top-space
+	.col-xs-12.col-sm-6
+		.box
+			.white.mdl-shadow--2dp.top-space
+				%section.border-bottom-top-space.large-padding
+					%h2 Listado de contactos
+					.row.middle-xs
+						.col-xs-12
+							.box
+								%ul#selector.text-left
+									-@contactos.each do |contacto|
+										.big-padding.top-space
+											%li.green-text
+												nombre
+												%span.black-text= contacto.name
+											%li
+												%strong correo
+												%p= contacto.email
+											%li 
+												%strong telefono
+												%p= contacto.phone
+											%li
+												%strong descripcion
+												%p= contacto.description
+					.action.text-right
+						=link_to 'Ver toda la lista', '#'

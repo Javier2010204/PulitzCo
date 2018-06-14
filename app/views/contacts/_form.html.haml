@@ -1,0 +1,25 @@
+= form_for @contact, remote: true do |f|
+  - if @contact.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@contact.errors.count, "error")} prohibited this contact from being saved:"
+      %ul
+        - @contact.errors.full_messages.each do |message|
+          %li= message
+
+  .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.full-width#contact-body
+    = f.text_field :name, class: 'mdl-textfield__input'
+    = f.label :name, class: 'mdl-textfield__label'
+  .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.full-width
+    = f.text_field :phone, class: 'mdl-textfield__input'
+    = f.label :phone, class: 'mdl-textfield__label'
+  .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.full-width
+    = f.text_field :job, class: 'mdl-textfield__input'
+    = f.label :job, class: 'mdl-textfield__label'
+  .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.full-width
+    = f.email_field :email, class: 'mdl-textfield__input'
+    = f.label :email, class: 'mdl-textfield__label'
+  .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.full-width
+    = f.text_field :description, class: 'mdl-textfield__input'
+    = f.label :description, class: 'mdl-textfield__label'
+  .actions.text-right
+    = f.submit 'Publicar', class: 'mdl-button mdl-js-button mdl-button--raised mdl-button--accent'

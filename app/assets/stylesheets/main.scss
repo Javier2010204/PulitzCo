@@ -1,0 +1,12 @@
+ .main-background{
+	background-image: url(#{asset_path('background-5.jpg')});
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+ .cover{
+ 	background-size: cover;
+ 	background-position: center;
+ }
+ .logo{
+ 	font-family: 'Pacifico', cursive;
+ }

@@ -1,0 +1,25 @@
+= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+	= devise_error_messages!
+	.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+		= f.email_field :email, autofocus: true, class: 'mdl-textfield__input', require: true
+		= f.label :email, class: 'mdl-textfield__label green-light-text'
+	.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+		= f.text_field :full_name, autofocus: true, class: 'mdl-textfield__input', require: true
+		= f.label :full_name, class: 'mdl-textfield__label green-light-text'
+	.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+		= f.password_field :password, autofocus: true, class: 'mdl-textfield__input'
+		= f.label :password, autofocus: true, class: 'mdl-textfield__label green-light-text'
+	.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+		= f.password_field :password_confirmation, autofocus: true, class: 'mdl-textfield__input'
+		= f.label :password_confirmation, autofocus: true, class: 'mdl-textfield__label green-light-text'
+	.top-space
+		.row.middle-xs
+			.col-xs-12.col-md-6
+				.box
+					=f.submit "Registrarme", class: 'mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--accent'
+			.col-xs-12.col-md-6
+				.box
+					=link_to 'Ya tengo cuenta', new_user_session_path, class: 'white-text underline'
+
+
+

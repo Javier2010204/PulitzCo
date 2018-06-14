@@ -1,0 +1,6 @@
+$('#contacts').prepend('<%= j render @contact %>')
+$('#contact_name').val('')
+$('#contact_phone').val('')
+$('#contact_email').val('')
+$('#contact_job').val('')
+$('#contact_description').val('')

@@ -1,0 +1,35 @@
+%article.mdl-shadow--2dp.large-padding.white.top-space.relative
+	%p.absolute
+		Imagen
+		=link_to contact.user.email, contact.user
+	%section.top-space{style: 'padding: 2em;'}
+		%h3.text-justify
+			=link_to contact.name,contact, class: 'no-underline'
+		.text-justify
+			%p.normal.teal-text
+				Telefono:
+				%span.black-text
+					=contact.phone
+			%p.normal.teal-text
+				Correo electronico
+				%span.black-text
+					=contact.email
+			%p.normal.teal-text
+				puesto de trabajo:
+				%span.black-text
+					aqui va el puesto
+			%p.normal.teal-text
+				Lugar:
+				%span.black-text
+					Lugar de trabajo
+			%p.normal.teal-text
+				categorias:
+				%span.black-text
+					Categoria 1 | Categoria 2 | Categoria 3
+			%p.normal.teal-text
+				tags:
+				%span.black-text
+					Tag 1 | Tag 2 | Tag 3
+	.text-right.top-space
+		agregado por 20 personas
+		=link_to 'Agregar', contact, class: 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored'
